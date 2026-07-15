@@ -3,24 +3,23 @@ fetch('./data/rates.json')
     .then(data => {
 
         document.getElementById('gold24').textContent =
-            `₹ ${data.gold24}`;
+            `₹ ${Number(data.gold24).toLocaleString('en-IN')}`;
 
         document.getElementById('gold22').textContent =
-            `₹ ${data.gold22}`;
+            `₹ ${Number(data.gold22).toLocaleString('en-IN')}`;
 
         document.getElementById('silver').textContent =
-            `₹ ${data.silver}`;
+            `₹ ${Number(data.silver).toLocaleString('en-IN')}`;
 
         document.getElementById('updatedAt').textContent =
             data.updated_at;
 
         document.getElementById('disclaimer').textContent =
             data.disclaimer;
-
     })
     .catch(error => {
 
-        console.error(error);
+        console.error('Error loading rates:', error);
 
         document.getElementById('gold24').textContent = 'N/A';
         document.getElementById('gold22').textContent = 'N/A';
