@@ -5,11 +5,7 @@
 .rate-bar {
     width: 100%;
 
-    background: linear-gradient(
-        90deg,
-        #3a001f,
-        #5a002f
-    );
+    background: #3a001f;
 
     border-top: 2px solid #d4af37;
     border-bottom: 2px solid #d4af37;
