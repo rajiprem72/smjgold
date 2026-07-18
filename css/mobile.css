@@ -285,3 +285,12 @@ footer p{
 .desktop-menu{
     display:none !important;
 }
+.dropdown > a {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
