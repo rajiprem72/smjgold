@@ -1,5 +1,6 @@
+
 // ==========================================
-// Shiva Mahajothi Jewellers
+// Smjgold
 // mobile.js
 // ==========================================
 
@@ -9,33 +10,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const menuWrapper = document.getElementById("menuWrapper");
 
-    // Open / Close hamburger menu
+    // Open / Close Menu
 
-    button.addEventListener("click", function (e) {
-
-        e.stopPropagation();
+    button.addEventListener("click", function () {
 
         menuWrapper.classList.toggle("open");
 
     });
 
-    // Handle clicks inside the mobile menu
+    // Accordion
 
-    menuWrapper.addEventListener("click", function (e) {
+    const dropdownLinks = document.querySelectorAll(".dropdown > a");
 
-        const link = e.target.closest(".dropdown > a");
+    dropdownLinks.forEach(function(link){
 
-        if (!link) return;
+        link.addEventListener("click", function(e){
 
-        e.preventDefault();
+            e.preventDefault();
 
-        const submenu = link.nextElementSibling;
-
-        if (submenu) {
+            const submenu = this.nextElementSibling;
 
             submenu.classList.toggle("show");
 
-        }
+        });
+
+    });
+
+    // Close menu after clicking normal link
+
+    const menuLinks = document.querySelectorAll(".mobile-menu a");
+
+    menuLinks.forEach(function(link){
+
+        link.addEventListener("click", function(){
+
+            if(this.nextElementSibling &&
+               this.nextElementSibling.classList.contains("submenu")){
+
+                return;
+
+            }
+
+            menuWrapper.classList.remove("open");
+
+        });
 
     });
 
