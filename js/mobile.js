@@ -19,30 +19,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Handle menu clicks
 
-    document.addEventListener("click", function (e) {
+   document.addEventListener("click", function (e) {
 
-        const link = e.target.closest(".mobile-menu a");
+    const dropdown = e.target.closest(".dropdown");
 
-        if (!link) return;
+    if (!dropdown) return;
 
-        const submenu = link.parentElement.querySelector(".submenu");
+    e.preventDefault();
 
-        // Gallery clicked
+    const submenu = dropdown.querySelector(".submenu");
 
-        if (submenu) {
+    if (submenu) {
 
-            e.preventDefault();
+        submenu.classList.toggle("show");
 
-            submenu.classList.toggle("show");
-
-            return;
-
-        }
-
-        // Normal link clicked
-
-        menuWrapper.classList.remove("open");
-
-    });
+    }
 
 });
