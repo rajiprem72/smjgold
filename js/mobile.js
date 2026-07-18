@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const menuWrapper = document.getElementById("menuWrapper");
 
-    // Open / Close Menu
+    // Open / Close menu
 
     button.addEventListener("click", function () {
 
@@ -17,44 +17,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // Accordion
+    // Handle menu clicks
 
     document.addEventListener("click", function (e) {
 
-    const link = e.target.closest(".dropdown > a");
+        const link = e.target.closest(".mobile-menu a");
 
-    if (!link) return;
+        if (!link) return;
 
-    e.preventDefault();
+        const submenu = link.parentElement.querySelector(".submenu");
 
-    const submenu = link.nextElementSibling;
+        // Gallery clicked
 
-    if (submenu) {
+        if (submenu) {
 
-        submenu.classList.toggle("show");
+            e.preventDefault();
 
-    }
+            submenu.classList.toggle("show");
 
-});
+            return;
 
-    // Close menu after clicking normal link
+        }
 
-    const menuLinks = document.querySelectorAll(".mobile-menu a");
+        // Normal link clicked
 
-    menuLinks.forEach(function(link){
-
-        link.addEventListener("click", function(){
-
-            if(this.nextElementSibling &&
-               this.nextElementSibling.classList.contains("submenu")){
-
-                return;
-
-            }
-
-            menuWrapper.classList.remove("open");
-
-        });
+        menuWrapper.classList.remove("open");
 
     });
 
