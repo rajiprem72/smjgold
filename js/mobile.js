@@ -9,30 +9,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const menuWrapper = document.getElementById("menuWrapper");
 
-    // Open / Close menu
+    // Open / Close hamburger menu
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (e) {
+
+        e.stopPropagation();
 
         menuWrapper.classList.toggle("open");
 
     });
 
-    // Handle menu clicks
+    // Handle clicks inside the mobile menu
 
-   document.addEventListener("click", function (e) {
+    menuWrapper.addEventListener("click", function (e) {
 
-    const dropdown = e.target.closest(".dropdown");
+        const link = e.target.closest(".dropdown > a");
 
-    if (!dropdown) return;
+        if (!link) return;
 
-    e.preventDefault();
+        e.preventDefault();
 
-    const submenu = dropdown.querySelector(".submenu");
+        const submenu = link.nextElementSibling;
 
-    if (submenu) {
+        if (submenu) {
 
-        submenu.classList.toggle("show");
+            submenu.classList.toggle("show");
 
-    }
+        }
+
+    });
 
 });
