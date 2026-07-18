@@ -1,0 +1,160 @@
+/* ==========================================
+   Management / Leadership Section
+========================================== */
+
+.management-section {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #fffdf7 0%, #fff8e8 100%);
+}
+
+.management-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.management-section .section-tag {
+    display: inline-block;
+
+    padding: 8px 20px;
+    margin-bottom: 18px;
+
+    background: linear-gradient(135deg, #d4af37, #f4d06f);
+
+    color: #222;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border-radius: 30px;
+}
+
+.management-section h2 {
+    margin-bottom: 30px;
+
+    color: #222;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.management-section p {
+    margin-bottom: 24px;
+
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.management-section strong {
+    color: #111;
+    font-weight: 700;
+}
+
+.management-section p:first-of-type {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-left: 5px solid #d4af37;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.management-section p:hover {
+    transform: translateY(-2px);
+    transition: 0.3s ease;
+}
+
+/* ==========================================
+   Optional decorative line
+========================================== */
+
+.management-section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 100px;
+    height: 4px;
+
+    margin-top: 12px;
+
+    background: linear-gradient(to right, #d4af37, #f4d06f);
+
+    border-radius: 10px;
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media (max-width: 992px) {
+
+    .management-section {
+        padding: 70px 25px;
+    }
+
+    .management-section h2 {
+        font-size: 2.3rem;
+    }
+
+    .management-section p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width: 768px) {
+
+    .management-section {
+        padding: 60px 18px;
+    }
+
+    .management-section .section-tag {
+        display: block;
+
+        width: fit-content;
+
+        margin: 0 auto 15px auto;
+    }
+
+    .management-section h2 {
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    .management-section h2::after {
+        margin: 12px auto 0;
+    }
+
+    .management-section p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .management-section p:first-of-type {
+        padding: 22px;
+    }
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width: 480px) {
+
+    .management-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .management-section p {
+        font-size: 0.92rem;
+    }
+}
