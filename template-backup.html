@@ -1,3 +1,4 @@
+
 <!--
 ===============================================================================
 
@@ -90,6 +91,8 @@ TWITTER
 PWA
 =========================-->
 
+<link rel="manifest"
+href="manifest.json">
 
 <meta name="theme-color"
 content="#0b2341">
@@ -164,35 +167,24 @@ href="css/rates.css">
         <li><a href="index.html">Home</a></li>
 
         <li><a href="about.html">About</a></li>
-  <li class="dropdown">
 
-            <a href="#">
-                Products
-                <i class="fa-solid fa-chevron-down"></i>
-            </a>
+        <li><a href="products.html">Products</a></li>
 
-            <ul class="submenu">
-
-                <li><a href="marbles.html">Marbles</a></li>
-
-                <li><a href="granites.html">Granites</a></li>
-
-                <li><a href="quartzite.html">Quartzite</a></li>
-               
-            </ul>
-
-  </li>
-
-		<li><a href="price-quote.html">Price Quote</a></li>
-	
-
-        <li><a href="testimonial.html">Testimonials</a></li>
+		<li><a href="testimonial.html">Testimonials</a></li>
 
         <li><a href="contact.html">Contact</a></li>
 
     </ul>
 
 </nav>
+
+    </div>
+
+    <button class="menu-toggle">
+
+        ☰
+
+    </button>
 
 </header>
 
@@ -207,16 +199,29 @@ href="css/rates.css">
 
       <!-- Desktop Menu -->
     <nav class="desktop-menu">
-		<div id="navigation-container"></div>
+
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="products.html">Products</a></li>
+
+		<li><a href="testimonial.html">Testimonials</a></li>
+       
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
     </nav>
-   <!-- Hamburger -->
+
+    <!-- Hamburger -->
     <button class="menu-toggle">
 
         ☰
 
-    </button>	
-
-
+    </button>
 </header>
 <section class="rate-bar">
     <div class="rate-container">
@@ -329,7 +334,8 @@ href="css/rates.css">
   ]
 }
 </script>
-<script src="js/rates.js"></script>
 <script src="js/mobile.js"></script>
+<script src="js/rates.js"></script>
+
 </body>
 </html>  
