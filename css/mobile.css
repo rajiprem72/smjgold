@@ -1,9 +1,9 @@
+
 /* ==========================================
-   Shiva Mahajothi Jewellers
+   SMJ GOld
    Mobile.css
    For screens up to 768px
 ========================================== */
-
 
 /* Hide desktop menu */
 .menu-wrapper{
@@ -121,7 +121,6 @@
 .submenu.show{
 
     display:block;
-    border: 2px solid red;
 
 }
 
@@ -284,13 +283,4 @@ footer p{
 
 .desktop-menu{
     display:none !important;
-}
-.dropdown > a {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
 }
