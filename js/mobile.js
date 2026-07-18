@@ -19,21 +19,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Accordion
 
-    const dropdownLinks = document.querySelectorAll(".dropdown > a");
+    document.addEventListener("click", function (e) {
 
-    dropdownLinks.forEach(function(link){
+    const link = e.target.closest(".dropdown > a");
 
-        link.addEventListener("click", function(e){
+    if (!link) return;
 
-            e.preventDefault();
+    e.preventDefault();
 
-            const submenu = this.nextElementSibling;
+    const submenu = link.nextElementSibling;
 
-            submenu.classList.toggle("show");
+    if (submenu) {
 
-        });
+        submenu.classList.toggle("show");
 
-    });
+    }
+
+});
 
     // Close menu after clicking normal link
 
