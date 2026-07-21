@@ -418,6 +418,12 @@ footer {
 .contact-item:hover {
     background: #f4f4f4;
 }
+
+.contact-panel.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
 /* ==========================================
    MOBILE ONLY
 ========================================== */
