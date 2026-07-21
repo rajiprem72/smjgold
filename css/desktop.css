@@ -382,24 +382,16 @@ footer {
     }
 }
 
-.mobile-menu ul li a {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-}
-
-.mobile-menu ul li a i:first-child {
-
-    width: 24px;
-
-    text-align: center;
-
+/* Default icon color */
+nav ul li a i {
     color: #d4af37;
+    transition: color 0.3s ease;
 }
 
+/* Hover icon color */
+nav ul li a:hover i {
+    color: #333;
+}
 /* ==========================================
    DESKTOP ONLY
 ========================================== */
