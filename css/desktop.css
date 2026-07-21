@@ -384,13 +384,13 @@ footer {
 
 /* Default icon color */
 nav ul li a i {
-    color: #d4af37;
+    color: #333;
     transition: color 0.3s ease;
 }
 
 /* Hover icon color */
 nav ul li a:hover i {
-    color: #333;
+    color: #d4af37;
 }
 /* ==========================================
    DESKTOP ONLY
