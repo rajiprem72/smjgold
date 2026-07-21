@@ -58,3 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+const button = document.querySelector(".contact-button");
+const panel = document.querySelector(".contact-panel");
+
+button.addEventListener("click", () => {
+    panel.classList.toggle("show");
+});
