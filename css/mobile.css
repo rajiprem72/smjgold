@@ -324,7 +324,23 @@ footer {
     padding:15px;
 
 }
+.mobile-menu ul li a {
 
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.mobile-menu ul li a i:first-child {
+
+    width: 24px;
+
+    text-align: center;
+
+    color: #d4af37;
+}
 
 /* ==========================================
    MOBILE ONLY
