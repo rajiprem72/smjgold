@@ -1,0 +1,102 @@
+/* ==========================================
+   Thanga Mazhai Flip Card
+========================================== */
+
+.gold-scheme-card-section {
+
+    padding: 80px 20px;
+
+    background: #f7f3f7;
+
+    text-align: center;
+}
+
+.flip-book {
+
+    width: 900px;
+
+    max-width: 95%;
+
+    margin: auto;
+
+    perspective: 1800px;
+
+    cursor: pointer;
+}
+
+.flip-book-inner {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    transform-style: preserve-3d;
+
+    transition: transform 1s ease-in-out;
+}
+
+.flip-book.flipped .flip-book-inner {
+
+    transform: rotateY(180deg);
+}
+
+.front-page,
+.back-page {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    backface-visibility: hidden;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.front-page img,
+.back-page img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.back-page {
+
+    transform: rotateY(180deg);
+}
+
+.flip-note {
+
+    margin-top: 25px;
+
+    font-size: 1.1rem;
+
+    color: #555;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .gold-scheme-card-section {
+
+        padding: 50px 15px;
+    }
+
+    .flip-note {
+
+        font-size: 0.95rem;
+    }
+}
