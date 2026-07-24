@@ -424,6 +424,17 @@ footer {
     visibility: visible;
     transform: translateX(0);
 }
+@media (max-width:768px){
+
+    .footer-container p{
+
+        white-space: nowrap;
+
+        font-size:1.1rem;
+
+    }
+
+}
 /* ==========================================
    MOBILE ONLY
 ========================================== */
