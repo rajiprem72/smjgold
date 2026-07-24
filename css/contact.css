@@ -269,13 +269,15 @@
     font-size:.95rem;
 }
 
-.contact-link{
+   .contact-link{
 
-    display:block;
+        display:inline-block;
 
-    width:100%;
+        width:auto;
 
-    text-align:center;
-}
+        padding:14px 28px;
+
+        text-align:center;
+    }
 
 }
