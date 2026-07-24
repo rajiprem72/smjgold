@@ -20,7 +20,7 @@
    SECTION HEADING
 ========================================== */
 
-.section-tag {
+.contact-tag {
 
     display: inline-block;
 
@@ -170,7 +170,7 @@
    BUTTON
 ========================================== */
 
-.contact-button {
+.contact-link {
 
     display: inline-block;
 
@@ -189,7 +189,7 @@
     transition: .35s;
 }
 
-.contact-button:hover {
+.contact-link:hover {
 
     background: linear-gradient(135deg,#b8860b,#7a0f35);
 
@@ -226,7 +226,7 @@
     padding:60px 15px;
 }
 
-.section-tag{
+.contact-tag{
 
     display:block;
 
@@ -269,7 +269,7 @@
     font-size:.95rem;
 }
 
-.contact-button{
+.contact-link{
 
     display:block;
 
