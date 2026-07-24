@@ -191,7 +191,7 @@ footer {
 
 .footer-container p {
 
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 
     color: #444;
 
@@ -297,6 +297,8 @@ footer {
     .footer-container p {
 
         font-size: 1.4rem;
+         white-space: nowrap;
+
     }
 
     .social-icons {
@@ -423,17 +425,6 @@ footer {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
-}
-@media (max-width:768px){
-
-    .footer-container p{
-
-        white-space: nowrap;
-
-        font-size:1.1rem;
-
-    }
-
 }
 /* ==========================================
    MOBILE ONLY
