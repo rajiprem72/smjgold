@@ -1,20 +1,18 @@
 /* =========================
    Gold & Silver Rates Bar
 ========================= */
-
 .rate-bar {
     width: 100%;
 
-    background: #3a001f;
+    background: linear-gradient(90deg, #082C7A, #0D47A1, #082C7A);
 
-    border-top: 2px solid #d4af37;
-    border-bottom: 2px solid #d4af37;
+    border-top: 2px solid #D4AF37;
+    border-bottom: 2px solid #D4AF37;
 
     padding: 8px 20px;
 
     box-sizing: border-box;
 }
-
 .rate-container {
     max-width: 1400px;
 
@@ -48,23 +46,18 @@
 
     margin-bottom: 2px;
 }
-
 .rate-item .value {
     display: block;
-
     font-size: 18px;
-
-    font-weight: 600;
-
+    font-weight: 700;
     color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .divider {
     width: 1px;
-
     height: 30px;
-
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(212, 175, 55, 0.45);
 }
 
 .rate-disclaimer {
