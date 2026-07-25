@@ -23,7 +23,7 @@ const chokerImages = [];
 for (let i = 1; i <= TOTAL_IMAGES; i++) {
 
     chokerImages.push(
-        `images/images/choker/img${i}.jpg`
+        `images/choker/img${i}.jpg`
     );
 
 }
