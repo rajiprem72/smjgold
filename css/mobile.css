@@ -197,7 +197,11 @@ footer {
 
     margin-bottom: 40px;
 }
-
+.copyright {
+    text-align: center;
+    line-height: 1.6;
+    margin: 0 auto;
+}
 /* ==============================
    Social Icons
 ============================== */
