@@ -1,0 +1,103 @@
+/* ==========================================
+   Shiva Mahajothi Jewellers
+   Metal Rates
+========================================== */
+
+const WEBAPP_URL =
+    "YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL";
+
+const form =
+    document.getElementById(
+        "metalRatesForm"
+    );
+
+const message =
+    document.getElementById(
+        "metal-rates-message"
+    );
+
+form.addEventListener(
+    "submit",
+    async function(e){
+
+        e.preventDefault();
+
+        const now = new Date();
+
+        const updated =
+            now.toLocaleString(
+                "en-IN",
+                {
+                    day:"2-digit",
+                    month:"short",
+                    year:"numeric",
+                    hour:"2-digit",
+                    minute:"2-digit",
+                    hour12:true
+                }
+            );
+
+        const data = {
+
+            city : "Tirunelveli",
+
+            gold24 :
+                Number(
+                    document.getElementById(
+                        "gold24"
+                    ).value
+                ),
+
+            gold22 :
+                Number(
+                    document.getElementById(
+                        "gold22"
+                    ).value
+                ),
+
+            silver :
+                Number(
+                    document.getElementById(
+                        "silver"
+                    ).value
+                ),
+
+            updated_at : updated,
+
+            disclaimer :
+                "Rates are indicative."
+
+        };
+
+        message.innerHTML =
+            "Updating...";
+
+        try{
+
+            const response =
+                await fetch(
+                    WEBAPP_URL,
+                    {
+                        method:"POST",
+
+                        body:JSON.stringify(data)
+                    }
+                );
+
+            const result =
+                await response.json();
+
+            message.innerHTML =
+                result.message;
+
+        }
+
+        catch(err){
+
+            message.innerHTML =
+                err.message;
+
+        }
+
+    }
+);
