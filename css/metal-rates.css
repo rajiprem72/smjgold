@@ -1,0 +1,251 @@
+/* ==========================================
+   Shiva Mahajothi Jewellers
+   Metal Rates Admin
+========================================== */
+
+.metal-rates-section{
+
+    padding:80px 20px;
+
+    background:#fffdf8;
+}
+
+/* ==========================================
+   Container
+========================================== */
+
+.metal-rates-container{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:#ffffff;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.12);
+}
+
+/* ==========================================
+   Heading
+========================================== */
+
+.metal-rates-tag{
+
+    display:inline-block;
+
+    padding:8px 22px;
+
+    background:linear-gradient(135deg,#7a0f35,#d4af37);
+
+    color:#ffffff;
+
+    border-radius:30px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+}
+
+.metal-rates-title{
+
+    font-size:2.6rem;
+
+    color:#4b001f;
+
+    margin-bottom:15px;
+
+    text-align:center;
+}
+
+.metal-rates-subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+}
+
+/* ==========================================
+   Form
+========================================== */
+
+.metal-rates-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+}
+
+.metal-rates-field{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.metal-rates-field label{
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:#4b001f;
+
+    margin-bottom:10px;
+}
+
+.metal-rates-field input{
+
+    width:100%;
+
+    padding:16px;
+
+    font-size:1.1rem;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+}
+
+.metal-rates-field input:focus{
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 12px rgba(212,175,55,.30);
+}
+
+/* ==========================================
+   Button
+========================================== */
+
+.metal-rates-button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        135deg,
+        #7a0f35,
+        #d4af37
+    );
+
+    color:#ffffff;
+
+    font-size:1.1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.metal-rates-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.20);
+}
+
+/* ==========================================
+   Status Message
+========================================== */
+
+.metal-rates-message{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    color:#006400;
+
+    min-height:25px;
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media(max-width:992px){
+
+    .metal-rates-container{
+
+        max-width:90%;
+    }
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:768px){
+
+    .metal-rates-section{
+
+        padding:60px 15px;
+    }
+
+    .metal-rates-container{
+
+        padding:30px 20px;
+    }
+
+    .metal-rates-title{
+
+        font-size:2rem;
+    }
+
+    .metal-rates-subtitle{
+
+        font-size:.95rem;
+    }
+
+    .metal-rates-field label{
+
+        font-size:.95rem;
+    }
+
+    .metal-rates-field input{
+
+        font-size:1rem;
+
+        padding:14px;
+    }
+
+    .metal-rates-button{
+
+        font-size:1rem;
+
+        padding:15px;
+    }
+
+}
