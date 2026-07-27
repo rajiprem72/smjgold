@@ -153,7 +153,6 @@ CSS
 <link rel="stylesheet"
 href="css/rates.css">
 
-
 <link rel="stylesheet"
 href="css/metal-rates.css">  
 
@@ -459,7 +458,95 @@ href="css/metal-rates.css">
 </section>
 
    <main>
+		<!-- ==========================================
+     Metal Rates Update Section
+========================================== -->
 
+<section class="metal-rates-section">
+
+    <div class="metal-rates-container">
+
+        <span class="metal-rates-tag">
+            Admin Panel
+        </span>
+
+        <h1 class="metal-rates-title">
+            Update Metal Rates
+        </h1>
+
+        <p class="metal-rates-subtitle">
+            Enter today's Gold and Silver rates and click
+            <strong>Update Rates</strong>.
+        </p>
+
+        <form
+            id="metalRatesForm"
+            class="metal-rates-form">
+
+            <div class="metal-rates-field">
+
+                <label for="gold24">
+
+                    Gold 24K 1gm Rate
+
+                </label>
+
+                <input
+                    type="number"
+                    id="gold24"
+                    required>
+
+            </div>
+
+            <div class="metal-rates-field">
+
+                <label for="gold22">
+
+                    Gold 22K 1gm Rate
+
+                </label>
+
+                <input
+                    type="number"
+                    id="gold22"
+                    required>
+
+            </div>
+
+            <div class="metal-rates-field">
+
+                <label for="silver">
+
+                    Silver 1gm Rate
+
+                </label>
+
+                <input
+                    type="number"
+                    id="silver"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="metal-rates-button">
+
+                Update Rates
+
+            </button>
+
+        </form>
+
+        <div
+            id="metal-rates-message"
+            class="metal-rates-message">
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
