@@ -36,7 +36,20 @@ form.addEventListener(
                     hour12:true
                 }
             );
+             console.log(
+            "Gold24 =",
+            document.getElementById("gold24").value
+        );
 
+        console.log(
+            "Gold22 =",
+            document.getElementById("gold22").value
+        );
+
+        console.log(
+            "Silver =",
+            document.getElementById("silver").value
+        );
         const data = {
 
             city : "Tirunelveli",
