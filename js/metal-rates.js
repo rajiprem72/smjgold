@@ -106,19 +106,13 @@ console.log(silver1.value);
 
         try{
 
-        const response =
-          await fetch(
-        WEBAPP_URL,
-        {
-            method: "POST",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify(data)
-        }
-    );
+       const response = await fetch(
+       WEBAPP_URL,
+       {
+           method: "POST",
+           body: JSON.stringify(data)
+       }
+      );
 
             const result =
                 await response.json();
