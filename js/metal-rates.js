@@ -36,21 +36,40 @@ form.addEventListener(
                     hour12:true
                 }
             );
-             console.log(
-            "Gold24 =",
-            document.getElementById("gold24").value
-        );
+  const g24 = document.getElementById("gold24");
 
-        console.log(
-            "Gold22 =",
-            document.getElementById("gold22").value
-        );
+console.log(g24);
 
-        console.log(
-            "Silver =",
-            document.getElementById("silver").value
-        );
-        const data = {
+console.log(g24.tagName);
+
+console.log(g24.outerHTML);
+
+console.log(g24.value);
+
+       
+       const g22 = document.getElementById("gold22");
+
+console.log(g22);
+
+console.log(g22.tagName);
+
+console.log(g22.outerHTML);
+
+console.log(g22.value);
+        
+       
+       const silver1 = document.getElementById("silver");
+
+console.log(silver1);
+
+console.log(silver1.tagName);
+
+console.log(silver1.outerHTML);
+
+console.log(silver1.value);
+       
+       
+       const data = {
 
             city : "Tirunelveli",
 
