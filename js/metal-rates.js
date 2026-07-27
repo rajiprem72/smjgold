@@ -55,21 +55,21 @@ form.addEventListener(
             city : "Tirunelveli",
 
             gold24 :
-                Number(
+                parseFloat(
                     document.getElementById(
                         "gold24"
                     ).value
                 ),
 
             gold22 :
-                Number(
+                parseFloat(
                     document.getElementById(
                         "gold22"
                     ).value
                 ),
 
             silver :
-                Number(
+                parseFloat(
                     document.getElementById(
                         "silver"
                     ).value
