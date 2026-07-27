@@ -36,7 +36,7 @@ form.addEventListener(
                     hour12:true
                 }
             );
-  const g24 = document.getElementById("gold24");
+  const g24 = document.getElementById("gold24Input");
 
 console.log(g24);
 
@@ -47,7 +47,7 @@ console.log(g24.outerHTML);
 console.log(g24.value);
 
        
-       const g22 = document.getElementById("gold22");
+const g22 = document.getElementById("gold22Input");
 
 console.log(g22);
 
@@ -58,7 +58,7 @@ console.log(g22.outerHTML);
 console.log(g22.value);
         
        
-       const silver1 = document.getElementById("silver");
+const silver1 = document.getElementById("silverInput");
 
 console.log(silver1);
 
