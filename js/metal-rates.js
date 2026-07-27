@@ -4,7 +4,7 @@
 ========================================== */
 
 const WEBAPP_URL =
-    "YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL";
+    "https://script.google.com/macros/s/AKfycbzp8S8A1s32vkuNqZKQPDe5amPeKR-rjJiyaPnHKHqcSn-LFmWhcwznUOAHtuRM5dCbjg/exec";
 
 const form =
     document.getElementById(
