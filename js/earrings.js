@@ -3,261 +3,119 @@
    Earrings Gallery
 ========================================== */
 
-.earrings-gallery-section{
+const TOTAL_IMAGES = 18;
 
-    padding:80px 20px;
+const earringsGallery =
+    document.getElementById("earrings-gallery");
 
-    background:#fffdf8;
+const earringsModal =
+    document.getElementById("earrings-modal");
+
+const earringsModalImage =
+    document.getElementById("earrings-modal-image");
+
+/* ==========================================
+   Create Image List
+========================================== */
+
+const earringsImages = [];
+
+for (let i = 1; i <= TOTAL_IMAGES; i++) {
+
+    earringsImages.push(
+        `images/earrings/img${i}.jpg`
+    );
+
 }
 
 /* ==========================================
-   Container
+   Shuffle Images
 ========================================== */
 
-.earrings-container{
+function shuffleArray(array) {
 
-    max-width:1300px;
+    for (
+        let i = array.length - 1;
+        i > 0;
+        i--
+    ) {
 
-    margin:auto;
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
 
-    text-align:center;
-}
+        [array[i], array[j]] =
+            [array[j], array[i]];
 
-/* ==========================================
-   Heading
-========================================== */
-
-.earrings-tag{
-
-    display:inline-block;
-
-    padding:8px 22px;
-
-    background:linear-gradient(135deg,#7a0f35,#d4af37);
-
-    color:#ffffff;
-
-    border-radius:30px;
-
-    font-size:0.9rem;
-
-    font-weight:600;
-
-    letter-spacing:1px;
-
-    margin-bottom:20px;
-}
-
-.earrings-title{
-
-    font-size:3rem;
-
-    color:#4b001f;
-
-    margin-bottom:15px;
-}
-
-.earrings-subtitle{
-
-    max-width:850px;
-
-    margin:0 auto 45px;
-
-    color:#666;
-
-    line-height:1.8;
-
-    font-size:1.05rem;
-}
-
-/* ==========================================
-   Gallery
-========================================== */
-
-.earrings-gallery{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:22px;
-}
-
-.earrings-gallery-item{
-
-    overflow:hidden;
-
-    border-radius:18px;
-
-    background:#ffffff;
-
-    cursor:pointer;
-
-    box-shadow:0 8px 22px rgba(0,0,0,.12);
-
-    transition:all .35s ease;
-}
-
-.earrings-gallery-item:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 18px 35px rgba(0,0,0,.18);
-}
-
-.earrings-gallery-item img{
-
-    width:100%;
-
-    height:320px;
-
-    object-fit:cover;
-
-    display:block;
-
-    transition:transform .35s ease;
-}
-
-.earrings-gallery-item:hover img{
-
-    transform:scale(1.08);
-}
-
-/* ==========================================
-   Full Screen Viewer
-========================================== */
-
-.earrings-modal{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.95);
-
-    display:none;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:99999;
-
-    cursor:zoom-out;
-
-    padding:20px;
-}
-
-.earrings-modal.active{
-
-    display:flex;
-}
-
-#earrings-modal-image{
-
-    max-width:95%;
-
-    max-height:95vh;
-
-    border-radius:12px;
-
-    box-shadow:0 0 35px rgba(255,255,255,.15);
-
-    animation:earringsZoom .3s ease;
-}
-
-@keyframes earringsZoom{
-
-    from{
-
-        transform:scale(.80);
-
-        opacity:0;
-    }
-
-    to{
-
-        transform:scale(1);
-
-        opacity:1;
     }
 
 }
 
 /* ==========================================
-   Tablet
+   Load Gallery
 ========================================== */
 
-@media(max-width:992px){
+function loadEarringsGallery() {
 
-    .earrings-gallery{
+    shuffleArray(earringsImages);
 
-        grid-template-columns:repeat(3,1fr);
-    }
+    earringsGallery.innerHTML = "";
 
-    .earrings-gallery-item img{
+    earringsImages.forEach(image => {
 
-        height:250px;
-    }
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "earrings-gallery-item";
+
+        const img =
+            document.createElement("img");
+
+        img.src = image;
+
+        img.alt = "Earrings Collection";
+
+        img.loading = "lazy";
+
+        img.onclick = () => {
+
+            earringsModalImage.src = image;
+
+            earringsModal.classList.add(
+                "active"
+            );
+
+        };
+
+        card.appendChild(img);
+
+        earringsGallery.appendChild(card);
+
+    });
 
 }
 
 /* ==========================================
-   Mobile
+   Close Modal
 ========================================== */
 
-@media(max-width:768px){
+earringsModal.addEventListener(
+    "click",
+    () => {
 
-    .earrings-gallery-section{
+        earringsModal.classList.remove(
+            "active"
+        );
 
-        padding:60px 15px;
+        earringsModalImage.src = "";
+
     }
-
-    .earrings-title{
-
-        font-size:2rem;
-    }
-
-    .earrings-subtitle{
-
-        font-size:.95rem;
-
-        margin-bottom:30px;
-    }
-
-    .earrings-gallery{
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:14px;
-    }
-
-    .earrings-gallery-item{
-
-        border-radius:12px;
-    }
-
-    .earrings-gallery-item img{
-
-        height:180px;
-    }
-
-}
+);
 
 /* ==========================================
-   Small Mobile
+   Start Gallery
 ========================================== */
 
-@media(max-width:480px){
-
-    .earrings-gallery{
-
-        gap:10px;
-    }
-
-    .earrings-gallery-item img{
-
-        height:160px;
-    }
-
-}
+loadEarringsGallery();
