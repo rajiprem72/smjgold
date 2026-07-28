@@ -249,3 +249,67 @@
     }
 
 }
+
+
+/* ==========================================
+   Reference Links
+========================================== */
+
+.metal-rates-links{
+
+    margin-top:40px;
+
+    padding-top:25px;
+
+    border-top:1px solid #ddd;
+}
+
+.metal-rates-links h3{
+
+    color:#7a0f35;
+
+    font-size:1.3rem;
+
+    margin-bottom:10px;
+}
+
+.metal-rates-links p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+}
+
+.metal-rates-links ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+}
+
+.metal-rates-links li{
+
+    margin-bottom:15px;
+}
+
+.metal-rates-links a{
+
+    color:#0056b3;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.metal-rates-links a:hover{
+
+    color:#d4af37;
+
+    text-decoration:underline;
+}
