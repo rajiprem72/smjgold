@@ -105,7 +105,7 @@ console.log(silver1.value);
             "Updating...";
 
         try{
-
+       console.log(JSON.stringify(data, null, 2));
        const response = await fetch(
        WEBAPP_URL,
        {
