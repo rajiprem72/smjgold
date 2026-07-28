@@ -69,38 +69,37 @@ console.log(silver1.outerHTML);
 console.log(silver1.value);
        
        
-       const data = {
+    const data = {
 
-            city : "Tirunelveli",
+    city : "Tirunelveli",
 
-            gold24 :
-                parseFloat(
-                    document.getElementById(
-                        "gold24"
-                    ).value
-                ),
+    gold24 :
+        parseFloat(
+            document.getElementById(
+                "gold24Input"
+            ).value
+        ),
 
-            gold22 :
-                parseFloat(
-                    document.getElementById(
-                        "gold22"
-                    ).value
-                ),
+    gold22 :
+        parseFloat(
+            document.getElementById(
+                "gold22Input"
+            ).value
+        ),
 
-            silver :
-                parseFloat(
-                    document.getElementById(
-                        "silver"
-                    ).value
-                ),
+    silver :
+        parseFloat(
+            document.getElementById(
+                "silverInput"
+            ).value
+        ),
 
-            updated_at : updated,
+    updated_at : updated,
 
-            disclaimer :
-                "Rates are indicative."
+    disclaimer :
+        "Rates are indicative."
 
-        };
-
+};
         message.innerHTML =
             "Updating...";
 
