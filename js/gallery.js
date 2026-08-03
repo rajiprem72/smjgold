@@ -2,6 +2,10 @@
    Shiva Mahajothi Jewellers
    Universal Gallery
 ========================================== */
+const galleryStatus =
+    document.getElementById(
+        "gallery-status"
+    );
 
 const gallery =
     document.getElementById(
@@ -57,6 +61,8 @@ async function loadGallery(){
 
         const images=
             await response.json();
+
+       galleryStatus.innerHTML = `We have <strong>${images.length}</strong> designs in our collection.`;
 
         shuffleArray(images);
 
