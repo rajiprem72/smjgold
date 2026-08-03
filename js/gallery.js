@@ -19,7 +19,7 @@ const modalImage =
     );
 
 /* ==========================================
-   Shuffle Images
+   Shuffle
 ========================================== */
 
 function shuffleArray(array){
@@ -55,14 +55,14 @@ async function loadGallery(){
                 `images/${galleryFolder}/images.json`
             );
 
-        const files=
+        const images=
             await response.json();
 
-        shuffleArray(files);
+        shuffleArray(images);
 
         gallery.innerHTML="";
 
-        files.forEach(file=>{
+        images.forEach(file=>{
 
             const card=
                 document.createElement("div");
@@ -106,7 +106,7 @@ async function loadGallery(){
         console.error(error);
 
         gallery.innerHTML=
-            "<p>Unable to load gallery.</p>";
+            "<h3>Unable to load gallery.</h3>";
 
     }
 
