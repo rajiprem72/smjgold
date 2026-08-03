@@ -2,6 +2,21 @@
    Shiva Mahajothi Jewellers
    Universal Gallery
 ========================================== */
+const galleryHeading =
+    document.getElementById(
+        "gallery-heading"
+    );
+
+const gallerySubtitle =
+    document.getElementById(
+        "gallery-subtitle"
+    );
+
+const galleryStatus =
+    document.getElementById(
+        "gallery-status"
+    );
+
 const galleryStatus =
     document.getElementById(
         "gallery-status"
