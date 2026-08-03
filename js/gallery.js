@@ -77,7 +77,11 @@ async function loadGallery(){
         const images=
             await response.json();
 
-       galleryStatus.innerHTML = `We have <strong>${images.length}</strong> designs in our collection.`;
+       galleryHeading.innerHTML =     galleryTitle;
+
+       gallerySubtitle.innerHTML =     galleryDescription;
+
+       galleryStatus.innerHTML =     `✨ Showing <strong>${images.length}</strong> Beautiful Designs`;
 
         shuffleArray(images);
 
