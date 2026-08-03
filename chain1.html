@@ -470,30 +470,39 @@ href="css/gallery.css">
 </section>
 
    <main>
-      <section class="gallery-section">
+	   <section class="gallery-section">
 
-    <script>
+    <div class="gallery-container">
 
-        const galleryFolder="chain";
+        <h1 id="gallery-heading"></h1>
 
-        const galleryTitle="Gold Chains";
+        <p
+            id="gallery-subtitle"
+            class="gallery-subtitle">
+        </p>
 
-    </script>
+        <div
+            id="gallery"
+            class="gallery-grid">
+        </div>
 
-    <div id="gallery"
-         class="gallery-grid">
-    </div>
-		  
-    <div id="gallery-status" class="gallery-status"></div>
-    <div id="gallery-modal"
-         class="gallery-modal">
-
-        <img
-            id="gallery-modal-image">
+        <div
+            id="gallery-status"
+            class="gallery-status">
+        </div>
 
     </div>
 
 </section>
+
+<div
+    id="gallery-modal"
+    class="gallery-modal">
+
+    <img
+        id="gallery-modal-image">
+
+</div>
 
 <script src="js/gallery.js"></script>
    
