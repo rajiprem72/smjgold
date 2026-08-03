@@ -2,6 +2,7 @@
    Shiva Mahajothi Jewellers
    Universal Gallery
 ========================================== */
+
 const galleryHeading =
     document.getElementById(
         "gallery-heading"
@@ -17,25 +18,13 @@ const galleryStatus =
         "gallery-status"
     );
 
-const galleryStatus =
-    document.getElementById(
-        "gallery-status"
-    );
+galleryStatusText = "Beautiful Designs";
 
-const gallery =
-    document.getElementById(
-        "gallery"
-    );
+const gallery =     document.getElementById("gallery");
 
-const modal =
-    document.getElementById(
-        "gallery-modal"
-    );
+const modal =     document.getElementById("gallery-modal");
 
-const modalImage =
-    document.getElementById(
-        "gallery-modal-image"
-    );
+const modalImage =  document.getElementById("gallery-modal-image");
 
 /* ==========================================
    Shuffle
@@ -81,7 +70,7 @@ async function loadGallery(){
 
        gallerySubtitle.innerHTML =     galleryDescription;
 
-       galleryStatus.innerHTML =     `✨ Showing <strong>${images.length}</strong> Beautiful Designs`;
+       galleryStatus.innerHTML = `✨ Showing <strong>${images.length}</strong> ${galleryStatusText}`;
 
         shuffleArray(images);
 
