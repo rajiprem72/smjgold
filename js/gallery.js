@@ -115,14 +115,13 @@ async function loadGallery(){
 
     }
 
-    catch(error){
+  catch(error){
 
-        console.error(error);
+    alert(error);
 
-        gallery.innerHTML=
-            "<h3>Unable to load gallery.</h3>";
+    console.error(error);
 
-    }
+}
 
 }
 
