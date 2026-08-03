@@ -1,0 +1,98 @@
+/* ==========================================
+   Universal Gallery
+========================================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(250px,1fr)
+        );
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0,0,0,.12);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    display:block;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.gallery-item img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+   Modal
+========================================== */
+
+.gallery-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        rgba(0,0,0,.90);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    visibility:hidden;
+
+    opacity:0;
+
+    transition:.30s;
+
+    z-index:9999;
+
+}
+
+.gallery-modal.active{
+
+    visibility:visible;
+
+    opacity:1;
+
+}
+
+.gallery-modal img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:10px;
+
+}
